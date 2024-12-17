@@ -1,0 +1,95 @@
+.logo {
+  height: 100px;
+}
+.main-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 10;
+  width: 98%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  z-index: 2;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .image-text {
+    font-size: 1.5rem;
+  }
+}
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 200px;
+  animation: scroll 10s linear infinite;
+}
+
+.marquee-content img {
+  height: 100px;
+  width: auto;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+#warranty {
+  transition: all 0.5s ease;
+}
+
+#time:hover,
+#parts:hover,
+#service:hover {
+  transform: scale(1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-icon a {
+  color: white;
+  text-decoration: none;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
